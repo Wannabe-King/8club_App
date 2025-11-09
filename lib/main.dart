@@ -1,5 +1,6 @@
-import 'package:assingment_8club_app/screens/experience_screen.dart';
-import 'package:assingment_8club_app/screens/onboarding_screen.dart';
+import 'package:assingment_8club_app/config/routes.dart';
+import 'package:assingment_8club_app/features/experiences/screens/experience_screen.dart';
+import 'package:assingment_8club_app/features/onboarding/screens/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,12 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      routes: {
-        '/experience':(context)=>ExperienceScreen(),
-        '/onboarding':(context)=>OnboardingScreen()
-      },
-      initialRoute: '/experience',
+      title: 'Assignment8Club',
+      routes: AppRoutes.routes,
+      initialRoute: AppRoutes.experiences,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
